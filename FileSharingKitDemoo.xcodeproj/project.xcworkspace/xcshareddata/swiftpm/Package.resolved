@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "coredatakit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Qyoom-Company/CoreDataKit",
+      "state" : {
+        "revision" : "a86fdbdb02b1608c46a0aae624bb57fbd4452111",
+        "version" : "1.0.1"
+      }
+    },
+    {
+      "identity" : "filesharingkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HossamSherraa/FileSharingKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "f3a4be3e34a81526ec26ee8b1b674ee09cecb18a"
+      }
+    },
+    {
+      "identity" : "flyingfox",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swhitty/FlyingFox.git",
+      "state" : {
+        "revision" : "7488f1e9b71ff2e37adccd816fe5c99858f183ba",
+        "version" : "0.11.1"
+      }
+    }
+  ],
+  "version" : 2
+}
