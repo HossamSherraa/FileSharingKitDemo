@@ -10,6 +10,10 @@ import FileSharingKit
 
 
 class LocalFolderViewModel : FolderViewModelProtocol {
+    func upload(item: some SharableItem, saveLocation: URL) async throws {
+        
+    }
+    
     @Published var folder  : Folder? = .myLocalFolder
     
     func download(item : Item ,downloadLocation : URL)async throws->URL {

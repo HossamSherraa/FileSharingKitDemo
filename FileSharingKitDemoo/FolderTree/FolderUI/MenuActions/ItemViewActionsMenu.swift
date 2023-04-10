@@ -19,6 +19,7 @@ struct ItemViewActionsMenu:ActionMenuView {
     
     struct InternalMenu : View {
         @State var isChossingFolderPresneted: Bool = false
+        @State var isChossingFolderForUpload: Bool = false
         @State var isChossingFolderPresnetedForCopy: Bool = false
         @State var isChangeNamePresented: Bool = false
         let item : Item
@@ -55,6 +56,8 @@ struct ItemViewActionsMenu:ActionMenuView {
                     Label("Rename", systemImage: "pencil" )
                 }
                 
+               
+                
                 
                 
             } label: {
@@ -81,8 +84,11 @@ struct ItemViewActionsMenu:ActionMenuView {
                             
                             
                             
+                        } itemSelection: {_ in
+                            
                         }
                     }
+                   
                     .alert("Change name", isPresented: $isChangeNamePresented) {
                         
                         
@@ -119,9 +125,29 @@ struct EmptyItemViewActionsMenu:ActionMenuView {
     }
 }
 
+struct EmptyFolderViewActionsMenu:ActionMenuView {
+    
+    func menu(for item : Folder)-> some View{
+        EmptyView()
+    }
+}
+
 
 struct ItemViewSelectionMenu : ActionMenuView{
+    let selection : (_ item : Item)-> Void
     func menu(for item: Item) -> some View {
-        EmptyView()
+        InternalMenu(item: item, selection: selection)
+    }
+    
+    struct InternalMenu : View {
+        let item : Item
+        let selection : (_ item : Item)-> Void
+        
+        var body: some View {
+            Button("Select") {
+                selection(item)
+            }
+        }
+        
     }
 }

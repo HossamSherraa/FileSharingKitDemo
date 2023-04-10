@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import FileSharingKit
 protocol FolderViewModelProtocol : ObservableObject {
     var folder : Folder? {get set}
     func send(serverEvent : ServerFolderEvent<Folder>)async
     func download(item : Item , downloadLocation : URL)async throws->URL
     func getPreviewImageFor(item : Item) async -> UIImage?
+    func upload(item : some SharableItem  , saveLocation : URL)async throws
     
 }

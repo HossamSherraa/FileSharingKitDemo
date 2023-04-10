@@ -10,6 +10,10 @@ import FileSharingKit
 import SwiftUI
 
 class SharedFolderViewModel : FolderViewModelProtocol {
+    func upload(item: some SharableItem, saveLocation: URL) async throws {
+        try await server.upload(item: item, saveLocation: saveLocation)
+    }
+    
     internal init(server: ServerReciever<Folder>) {
         self.server = server
     }
@@ -49,6 +53,8 @@ class SharedFolderViewModel : FolderViewModelProtocol {
         }
     }
     
+    
+    
 }
 
 
@@ -69,7 +75,7 @@ struct SharedFolderView : View {
     var body: some View {
         NavigationView {
             if let folder = viewModel.folder {
-                FolderView(itemMenu: ItemViewActionsMenu(viewModel: viewModel), folderMenu: EmptyFolderViewActionsMenu(), folder: folder , viewModel: viewModel )
+                FolderView(itemMenu: ItemViewActionsMenu(viewModel: viewModel), folderMenu: FolderViewActionsMenu(viewModel: viewModel), folder: folder , viewModel: viewModel )
                     .toolbar {
                         ToolbarItem(placement: .navigationBarLeading) {
                             Button("Close") {

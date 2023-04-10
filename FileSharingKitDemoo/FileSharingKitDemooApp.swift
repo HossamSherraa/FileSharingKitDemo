@@ -31,6 +31,9 @@ struct FilesharingLocalServerApp: App {
             .fullScreenCover(isPresented: $isConnectPresented, content: {
                 sharing.recieve(delegate: DemoSharingFolderDelegate())
             })
+            .onAppear(perform: {
+                try? FileManager.default.createDirectory(at: .documentsDirectory.appending(path: "/Main"), withIntermediateDirectories: true)
+            })
            
             .preferredColorScheme(.dark)
                

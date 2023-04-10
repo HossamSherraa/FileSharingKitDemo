@@ -24,11 +24,12 @@ struct SharedFolderSelection: View {
 
 struct MyFilesFolderSelection : View {
     @StateObject var localViewModel : LocalFolderViewModel = .init()
-    var selection : (_ selection : Folder ) -> Void
+    var folderSelection : (_ selection : Folder ) -> Void
+    var itemSelection : (_ itemSelection : Item ) -> Void
     var body: some View {
         NavigationStack {
             if let folder = localViewModel.folder {
-                FolderView(itemMenu: EmptyItemViewActionsMenu(), folderMenu: FolderViewSelectionMenu(selection: selection), folder: folder, viewModel: localViewModel)
+                FolderView(itemMenu: ItemViewSelectionMenu(selection: itemSelection), folderMenu: FolderViewSelectionMenu(selection: folderSelection), folder: folder, viewModel: localViewModel)
             }
             
         }

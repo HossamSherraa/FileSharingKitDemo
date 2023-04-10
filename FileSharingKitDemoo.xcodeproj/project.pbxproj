@@ -23,11 +23,13 @@
 		9F64CE3529E2186F00D64D16 /* FolderViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2729E2186E00D64D16 /* FolderViewModelProtocol.swift */; };
 		9F64CE3629E2186F00D64D16 /* ThumpnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2829E2186E00D64D16 /* ThumpnailView.swift */; };
 		9F64CE3729E2186F00D64D16 /* ItemViewActionsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2A29E2186E00D64D16 /* ItemViewActionsMenu.swift */; };
-		9F64CE3829E2186F00D64D16 /* EmptyFolderViewActionsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2B29E2186E00D64D16 /* EmptyFolderViewActionsMenu.swift */; };
+		9F64CE3829E2186F00D64D16 /* FolderViewActionsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2B29E2186E00D64D16 /* FolderViewActionsMenu.swift */; };
 		D079B74829E3EF78008C5F8B /* FileSharingKit in Frameworks */ = {isa = PBXBuildFile; productRef = D079B74729E3EF78008C5F8B /* FileSharingKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F38D58129E4189400BE44AC /* FileSharingKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FileSharingKit; path = ../../FileSharingKit/FileSharingKit; sourceTree = "<group>"; };
+		9F38D58229E443CA00BE44AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9F64CE0929E2172D00D64D16 /* FileSharingKitDemoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileSharingKitDemoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F64CE0C29E2172D00D64D16 /* FileSharingKitDemooApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSharingKitDemooApp.swift; sourceTree = "<group>"; };
 		9F64CE0E29E2172D00D64D16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,8 +48,7 @@
 		9F64CE2729E2186E00D64D16 /* FolderViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderViewModelProtocol.swift; sourceTree = "<group>"; };
 		9F64CE2829E2186E00D64D16 /* ThumpnailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumpnailView.swift; sourceTree = "<group>"; };
 		9F64CE2A29E2186E00D64D16 /* ItemViewActionsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewActionsMenu.swift; sourceTree = "<group>"; };
-		9F64CE2B29E2186E00D64D16 /* EmptyFolderViewActionsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyFolderViewActionsMenu.swift; sourceTree = "<group>"; };
-		D079B74629E3EF6B008C5F8B /* FileSharingKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FileSharingKit; path = ../FileSharingKit; sourceTree = "<group>"; };
+		9F64CE2B29E2186E00D64D16 /* FolderViewActionsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderViewActionsMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +66,6 @@
 		9F64CE0029E2172D00D64D16 = {
 			isa = PBXGroup;
 			children = (
-				D079B74629E3EF6B008C5F8B /* FileSharingKit */,
 				9F64CE0B29E2172D00D64D16 /* FileSharingKitDemoo */,
 				9F64CE0A29E2172D00D64D16 /* Products */,
 				9F64CE3F29E21A0B00D64D16 /* Frameworks */,
@@ -83,6 +83,8 @@
 		9F64CE0B29E2172D00D64D16 /* FileSharingKitDemoo */ = {
 			isa = PBXGroup;
 			children = (
+				9F38D58229E443CA00BE44AC /* Info.plist */,
+				9F38D58129E4189400BE44AC /* FileSharingKit */,
 				9F64CE0C29E2172D00D64D16 /* FileSharingKitDemooApp.swift */,
 				9F64CE0E29E2172D00D64D16 /* ContentView.swift */,
 				9F64CE1B29E2186E00D64D16 /* FolderTree */,
@@ -140,7 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				9F64CE2A29E2186E00D64D16 /* ItemViewActionsMenu.swift */,
-				9F64CE2B29E2186E00D64D16 /* EmptyFolderViewActionsMenu.swift */,
+				9F64CE2B29E2186E00D64D16 /* FolderViewActionsMenu.swift */,
 			);
 			path = MenuActions;
 			sourceTree = "<group>";
@@ -233,7 +235,7 @@
 				9F64CE3129E2186F00D64D16 /* FolderSelection.swift in Sources */,
 				9F64CE2C29E2186F00D64D16 /* FolderServerEvent.swift in Sources */,
 				9F64CE3329E2186F00D64D16 /* LocalFolderView.swift in Sources */,
-				9F64CE3829E2186F00D64D16 /* EmptyFolderViewActionsMenu.swift in Sources */,
+				9F64CE3829E2186F00D64D16 /* FolderViewActionsMenu.swift in Sources */,
 				9F64CE0F29E2172D00D64D16 /* ContentView.swift in Sources */,
 				9F64CE3029E2186F00D64D16 /* ItemView.swift in Sources */,
 				9F64CE3629E2186F00D64D16 /* ThumpnailView.swift in Sources */,
@@ -370,6 +372,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FileSharingKitDemoo/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -380,6 +384,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -410,6 +415,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FileSharingKitDemoo/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -420,6 +427,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
