@@ -10,15 +10,6 @@
       }
     },
     {
-      "identity" : "filesharingkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/HossamSherraa/FileSharingKit",
-      "state" : {
-        "branch" : "main",
-        "revision" : "f3a4be3e34a81526ec26ee8b1b674ee09cecb18a"
-      }
-    },
-    {
       "identity" : "flyingfox",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swhitty/FlyingFox.git",

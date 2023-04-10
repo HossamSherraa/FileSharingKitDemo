@@ -24,7 +24,7 @@
 		9F64CE3629E2186F00D64D16 /* ThumpnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2829E2186E00D64D16 /* ThumpnailView.swift */; };
 		9F64CE3729E2186F00D64D16 /* ItemViewActionsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2A29E2186E00D64D16 /* ItemViewActionsMenu.swift */; };
 		9F64CE3829E2186F00D64D16 /* EmptyFolderViewActionsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2B29E2186E00D64D16 /* EmptyFolderViewActionsMenu.swift */; };
-		9F64CE4429E21C6F00D64D16 /* FileSharingKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9F64CE4329E21C6F00D64D16 /* FileSharingKit */; };
+		D079B74829E3EF78008C5F8B /* FileSharingKit in Frameworks */ = {isa = PBXBuildFile; productRef = D079B74729E3EF78008C5F8B /* FileSharingKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +47,7 @@
 		9F64CE2829E2186E00D64D16 /* ThumpnailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumpnailView.swift; sourceTree = "<group>"; };
 		9F64CE2A29E2186E00D64D16 /* ItemViewActionsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewActionsMenu.swift; sourceTree = "<group>"; };
 		9F64CE2B29E2186E00D64D16 /* EmptyFolderViewActionsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyFolderViewActionsMenu.swift; sourceTree = "<group>"; };
+		D079B74629E3EF6B008C5F8B /* FileSharingKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FileSharingKit; path = ../FileSharingKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F64CE4429E21C6F00D64D16 /* FileSharingKit in Frameworks */,
+				D079B74829E3EF78008C5F8B /* FileSharingKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +65,7 @@
 		9F64CE0029E2172D00D64D16 = {
 			isa = PBXGroup;
 			children = (
+				D079B74629E3EF6B008C5F8B /* FileSharingKit */,
 				9F64CE0B29E2172D00D64D16 /* FileSharingKitDemoo */,
 				9F64CE0A29E2172D00D64D16 /* Products */,
 				9F64CE3F29E21A0B00D64D16 /* Frameworks */,
@@ -167,7 +169,7 @@
 			);
 			name = FileSharingKitDemoo;
 			packageProductDependencies = (
-				9F64CE4329E21C6F00D64D16 /* FileSharingKit */,
+				D079B74729E3EF78008C5F8B /* FileSharingKit */,
 			);
 			productName = FileSharingKitDemoo;
 			productReference = 9F64CE0929E2172D00D64D16 /* FileSharingKitDemoo.app */;
@@ -198,7 +200,6 @@
 			);
 			mainGroup = 9F64CE0029E2172D00D64D16;
 			packageReferences = (
-				9F64CE4229E21C6F00D64D16 /* XCRemoteSwiftPackageReference "FileSharingKit" */,
 			);
 			productRefGroup = 9F64CE0A29E2172D00D64D16 /* Products */;
 			projectDirPath = "";
@@ -459,21 +460,9 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		9F64CE4229E21C6F00D64D16 /* XCRemoteSwiftPackageReference "FileSharingKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/HossamSherraa/FileSharingKit";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		9F64CE4329E21C6F00D64D16 /* FileSharingKit */ = {
+		D079B74729E3EF78008C5F8B /* FileSharingKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9F64CE4229E21C6F00D64D16 /* XCRemoteSwiftPackageReference "FileSharingKit" */;
 			productName = FileSharingKit;
 		};
 /* End XCSwiftPackageProductDependency section */

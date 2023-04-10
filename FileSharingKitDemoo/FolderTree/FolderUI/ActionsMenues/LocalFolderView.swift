@@ -12,7 +12,7 @@ import FileSharingKit
 class LocalFolderViewModel : FolderViewModelProtocol {
     @Published var folder  : Folder? = .myLocalFolder
     
-    func download(item : Item)async throws->URL {
+    func download(item : Item ,downloadLocation : URL)async throws->URL {
         
         item.originalURL
     }

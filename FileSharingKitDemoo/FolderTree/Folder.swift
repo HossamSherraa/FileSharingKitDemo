@@ -72,8 +72,8 @@ struct Folder: Identifiable , Hashable , Sharable {
     }
     
     
-    static var fileToShare : Folder = try! Folder.init(at: URL.init(filePath: "/Users/hossam/Downloads/NewMusicCovers"))
-    static var myLocalFolder : Folder = try! Folder.init(at: URL.init(filePath: "/Users/hossam/Downloads/Okk"))
+    static var fileToShare : Folder = try! Folder.init(at: URL.init(filePath: "/Users/macbookair/Downloads/Rt"))
+    static var myLocalFolder : Folder = try! Folder.init(at: URL.init(filePath: "/Users/macbookair/Downloads/MyFolder"))
     
 }
 

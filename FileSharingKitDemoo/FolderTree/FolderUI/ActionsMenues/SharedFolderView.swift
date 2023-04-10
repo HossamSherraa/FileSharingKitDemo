@@ -32,9 +32,9 @@ class SharedFolderViewModel : FolderViewModelProtocol {
         }
     }
     
-    func download(item : Item)async throws->URL {
+    func download(item : Item , downloadLocation : URL = .temporaryDirectory)async throws->URL {
         
-        try await server.download(item: item)
+        try await server.download(item: item , downloadLocation: downloadLocation)
         
     }
     
