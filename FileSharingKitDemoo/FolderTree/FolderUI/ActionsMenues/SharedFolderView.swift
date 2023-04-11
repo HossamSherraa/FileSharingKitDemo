@@ -10,8 +10,11 @@ import FileSharingKit
 import SwiftUI
 
 class SharedFolderViewModel : FolderViewModelProtocol {
-    func upload(item: some SharableItem, saveLocation: URL) async throws {
-        try await server.upload(item: item, saveLocation: saveLocation)
+    func upload(item: Item, saveLocation: URL) async throws {
+        let newFolder = try await server.upload(item: item, saveLocation: saveLocation)
+          await MainActor.run {
+            self.folder = newFolder
+        }
     }
     
     internal init(server: ServerReciever<Folder>) {

@@ -28,7 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9F38D58129E4189400BE44AC /* FileSharingKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FileSharingKit; path = ../../FileSharingKit/FileSharingKit; sourceTree = "<group>"; };
 		9F64CE0929E2172D00D64D16 /* FileSharingKitDemoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileSharingKitDemoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F64CE0C29E2172D00D64D16 /* FileSharingKitDemooApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSharingKitDemooApp.swift; sourceTree = "<group>"; };
 		9F64CE0E29E2172D00D64D16 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		9F64CE2829E2186E00D64D16 /* ThumpnailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumpnailView.swift; sourceTree = "<group>"; };
 		9F64CE2A29E2186E00D64D16 /* ItemViewActionsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewActionsMenu.swift; sourceTree = "<group>"; };
 		9F64CE2B29E2186E00D64D16 /* FolderViewActionsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderViewActionsMenu.swift; sourceTree = "<group>"; };
+		D04DA9B429E56C9500ED8CC1 /* FileSharingKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FileSharingKit; path = ../../FileSharingKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 		9F64CE0B29E2172D00D64D16 /* FileSharingKitDemoo */ = {
 			isa = PBXGroup;
 			children = (
-				9F38D58129E4189400BE44AC /* FileSharingKit */,
+				D04DA9B429E56C9500ED8CC1 /* FileSharingKit */,
 				9F64CE0C29E2172D00D64D16 /* FileSharingKitDemooApp.swift */,
 				9F64CE0E29E2172D00D64D16 /* ContentView.swift */,
 				9F64CE1B29E2186E00D64D16 /* FolderTree */,

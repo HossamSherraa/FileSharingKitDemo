@@ -12,6 +12,6 @@ protocol FolderViewModelProtocol : ObservableObject {
     func send(serverEvent : ServerFolderEvent<Folder>)async
     func download(item : Item , downloadLocation : URL)async throws->URL
     func getPreviewImageFor(item : Item) async -> UIImage?
-    func upload(item : some SharableItem  , saveLocation : URL)async throws
+    func upload(item : Item  , saveLocation : URL)async throws
     
 }
