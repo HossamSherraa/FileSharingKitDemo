@@ -20,18 +20,27 @@ struct FolderViewActionsMenu: ActionMenuView {
     struct InnerMenu : View {
         let folder : Folder
         let viewModel : SharedFolderViewModel
+        @State var progress : Double?
         
         @State var isChossingFolderForUpload : Bool = false
         
+        
     var body: some View {
-        Menu {
-            Button {
-                isChossingFolderForUpload.toggle()
-            } label: {
-                Label("Put File", systemImage: "paperplane.fill" )
+        VStack{
+            if let progress {
+                ProgressView(value: progress , total: 1)
+            }else {
+                Menu {
+                    Button {
+                        isChossingFolderForUpload.toggle()
+                    } label: {
+                        Label("Put File", systemImage: "paperplane.fill" )
+                    }
+                } label: {
+                    Image(systemName: "ellipsis.circle.fill")
+                }
             }
-        } label: {
-                Image(systemName: "ellipsis.circle.fill")
+            
         }
         .sheet(isPresented: $isChossingFolderForUpload) {
             MyFilesFolderSelection() { folder in
@@ -41,10 +50,16 @@ struct FolderViewActionsMenu: ActionMenuView {
                 
                 
             } itemSelection: { item in
+                isChossingFolderForUpload = false
                 Task{
+                    
                     do {
                         print("Start Uplaoding")
-                        try await viewModel.upload(item:item, saveLocation: self.folder.originalURL.appending(component: item.originalURL.lastPathComponent))
+                        try await viewModel.upload(item:item, saveLocation: self.folder.originalURL.appending(component: item.originalURL.lastPathComponent), progress: { progress in 
+                            self.progress = progress
+                        })
+                        
+                        progress = nil
                         
                         print("End Uplaoding")
                        

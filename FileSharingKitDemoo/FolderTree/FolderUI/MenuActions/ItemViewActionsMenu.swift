@@ -26,7 +26,21 @@ struct ItemViewActionsMenu:ActionMenuView {
         @State var newName : String = ""
         let viewModel : SharedFolderViewModel
         
+        @State var progress : Double?
+        
         var body: some View {
+            
+            if let progress {
+                ProgressView(value: progress , total: 1)
+            }else {
+                menu
+            }
+            
+            
+        }
+        
+        
+        var menu : some View {
             Menu {
                 Button {
                     
@@ -74,10 +88,13 @@ struct ItemViewActionsMenu:ActionMenuView {
                     }
                     .sheet(isPresented: $isChossingFolderPresnetedForCopy) {
                         MyFilesFolderSelection() { folder in
-                            
+                            isChossingFolderPresnetedForCopy = false 
                             Task{
                                 
-                                let itemLocation = try await viewModel.download(item: item)
+                                let itemLocation = try await viewModel.download(item: item, downloadLocation: .temporaryDirectory ) {progress in
+                                    self.progress = progress
+                                }
+                                progress = nil
                                 try FileManager.default.copyItem(at: itemLocation, to: folder.originalLocation.appending(component: itemLocation.lastPathComponent))
                                 
                             }
@@ -111,9 +128,6 @@ struct ItemViewActionsMenu:ActionMenuView {
                 
                 
             }
-            
-            
-            
         }
     }
 }

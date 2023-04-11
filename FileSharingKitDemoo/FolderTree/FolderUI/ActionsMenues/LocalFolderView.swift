@@ -10,17 +10,19 @@ import FileSharingKit
 
 
 class LocalFolderViewModel : FolderViewModelProtocol {
-    func upload(item: some SharableItem, saveLocation: URL) async throws {
-        
-    }
-    
-    @Published var folder  : Folder? = .myLocalFolder
-    
-    func download(item : Item ,downloadLocation : URL)async throws->URL {
-        
+    func download(item: Item, downloadLocation: URL, progress: @Sendable (Double) -> Void) async throws -> URL {
         item.originalURL
     }
     
+    func upload(item: Item, saveLocation: URL, progress: @Sendable (Double) -> Void) async throws {
+         
+    }
+    
+    
+    
+    @Published var folder  : Folder? = .myLocalFolder
+    
+     
     func getPreviewImageFor(item : Item) async -> UIImage?{
         try? await ThumpnailProvider().getThumpnail(url: item.originalURL, size: .init(width: 90, height: 120))
     }
