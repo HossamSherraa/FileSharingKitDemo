@@ -10,12 +10,12 @@
       }
     },
     {
-      "identity" : "flyingfox",
+      "identity" : "flyingfoxios11",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/swhitty/FlyingFox.git",
+      "location" : "https://github.com/HossamSherraa/FlyingFoxiOS11",
       "state" : {
-        "revision" : "7488f1e9b71ff2e37adccd816fe5c99858f183ba",
-        "version" : "0.11.1"
+        "revision" : "d158b7a4319564ed5edb410b9e3326798d77061b",
+        "version" : "1.0.0"
       }
     }
   ],
