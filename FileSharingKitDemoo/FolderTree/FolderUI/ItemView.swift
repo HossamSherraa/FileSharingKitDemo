@@ -41,6 +41,13 @@ struct ItemView<ItemMenu : ActionMenuView , VM : FolderViewModelProtocol>: View 
                         
                         
                 }
+            } .onTapGesture {
+                Task{
+                    let filePreview = try await viewModel.download(item: item, downloadLocation: .temporaryDirectory)
+                    await MainActor.run {
+                        self.filePreview = filePreview
+                    }
+                }
             }
                  
                
@@ -73,14 +80,7 @@ struct ItemView<ItemMenu : ActionMenuView , VM : FolderViewModelProtocol>: View 
                 self.previewImage = previewImage
             }
         }
-        .onTapGesture {
-            Task{
-                let filePreview = try await viewModel.download(item: item, downloadLocation: .temporaryDirectory)
-                await MainActor.run {
-                    self.filePreview = filePreview
-                }
-            }
-        }.onAppear {
+       .onAppear {
             filePreview = nil 
         }
         
