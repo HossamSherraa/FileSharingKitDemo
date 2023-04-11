@@ -13,7 +13,7 @@ struct FilesharingLocalServerApp: App , SharingFolderDelegate {
     @State var isServerPresented : Bool = false
     
     @State var server : ServerReciever<Folder>? = nil
-    let sharing = FileSharing<Folder>()
+    let sharing = FileSharing()
     var body: some Scene {
         WindowGroup {
             NavigationView {
@@ -28,11 +28,11 @@ struct FilesharingLocalServerApp: App , SharingFolderDelegate {
                 }
             }
             .fullScreenCover(isPresented: $isServerPresented, content: {
-                sharing.share(folder: .fileToShare)
+                sharing.share(folder: Folder.fileToShare , delegate: DefaultServerDelegate())
                 
             })
             .fullScreenCover(isPresented: $isConnectPresented, content: {
-                sharing.recieve(delegate: self)
+                sharing.recieve(folderType: Folder.self ,delegate: self)
                     .sheet(item: $server) { server in
                         SharedFolderView(server: server)
                     }
