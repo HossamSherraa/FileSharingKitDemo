@@ -8,9 +8,11 @@
 import SwiftUI
 import FileSharingKit
 @main
-struct FilesharingLocalServerApp: App {
+struct FilesharingLocalServerApp: App , SharingFolderDelegate {
     @State var isConnectPresented : Bool = false
     @State var isServerPresented : Bool = false
+    
+    @State var server : ServerReciever<Folder>? = nil
     let sharing = FileSharing<Folder>()
     var body: some Scene {
         WindowGroup {
@@ -27,18 +29,32 @@ struct FilesharingLocalServerApp: App {
             }
             .fullScreenCover(isPresented: $isServerPresented, content: {
                 sharing.share(folder: .fileToShare)
+                
             })
             .fullScreenCover(isPresented: $isConnectPresented, content: {
-                sharing.recieve(delegate: DemoSharingFolderDelegate())
+                sharing.recieve(delegate: self)
+                    .sheet(item: $server) { server in
+                        SharedFolderView(server: server)
+                    }
             })
             .onAppear(perform: {
                 try? FileManager.default.createDirectory(at: .documentsDirectory.appending(path: "/Main"), withIntermediateDirectories: true)
             })
            
             .preferredColorScheme(.dark)
+            
                
 
         }
     }
+    func presentSharedFolderView(server: FileSharingKit.ServerReciever<Folder>) {
+        self.server = server
+    }
+    
+    func dismissSharedFolderView() {
+        server = nil
+    }
+    
+    
 }
 

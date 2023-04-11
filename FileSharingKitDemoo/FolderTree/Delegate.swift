@@ -8,9 +8,4 @@
 import Foundation
 import FileSharingKit
 import SwiftUI
-struct DemoSharingFolderDelegate : SharingFolderDelegate{
-    typealias F =  Folder
-    func viewControllerFor(server: ServerReciever<Folder>) -> UIViewController {
-        UIHostingController(rootView: SharedFolderView(server: server))
-    }
-}
+ 
