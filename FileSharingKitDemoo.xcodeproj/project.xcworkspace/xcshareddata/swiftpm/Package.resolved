@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Qyoom-Company/CoreDataKit",
       "state" : {
-        "revision" : "a86fdbdb02b1608c46a0aae624bb57fbd4452111",
-        "version" : "1.0.1"
+        "revision" : "4a217d92da781817b3d9b0682174381ac9039567",
+        "version" : "1.0.2"
       }
     },
     {

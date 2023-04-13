@@ -26,7 +26,7 @@
 		9F64CE3829E2186F00D64D16 /* FolderViewActionsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2B29E2186E00D64D16 /* FolderViewActionsMenu.swift */; };
 		D035206E29E5D377004D0090 /* TrustedDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035206D29E5D377004D0090 /* TrustedDeviceCell.swift */; };
 		D035207029E5D52F004D0090 /* TrustedDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035206F29E5D52F004D0090 /* TrustedDevices.swift */; };
-		D079B74829E3EF78008C5F8B /* FileSharingKit in Frameworks */ = {isa = PBXBuildFile; productRef = D079B74729E3EF78008C5F8B /* FileSharingKit */; };
+		D03DB86129E740F4001D4AC9 /* FileSharingKit in Frameworks */ = {isa = PBXBuildFile; productRef = D03DB86029E740F4001D4AC9 /* FileSharingKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,7 @@
 		9F64CE2B29E2186E00D64D16 /* FolderViewActionsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderViewActionsMenu.swift; sourceTree = "<group>"; };
 		D035206D29E5D377004D0090 /* TrustedDeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustedDeviceCell.swift; sourceTree = "<group>"; };
 		D035206F29E5D52F004D0090 /* TrustedDevices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustedDevices.swift; sourceTree = "<group>"; };
-		D04DA9B429E56C9500ED8CC1 /* FileSharingKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FileSharingKit; path = ../../FileSharingKit; sourceTree = "<group>"; };
+		D03DB85F29E740E6001D4AC9 /* FileSharingKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FileSharingKit; path = ../../Final/FileSharingKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D079B74829E3EF78008C5F8B /* FileSharingKit in Frameworks */,
+				D03DB86129E740F4001D4AC9 /* FileSharingKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 		9F64CE0B29E2172D00D64D16 /* FileSharingKitDemoo */ = {
 			isa = PBXGroup;
 			children = (
-				D04DA9B429E56C9500ED8CC1 /* FileSharingKit */,
+				D03DB85F29E740E6001D4AC9 /* FileSharingKit */,
 				9F64CE0C29E2172D00D64D16 /* FileSharingKitDemooApp.swift */,
 				9F64CE0E29E2172D00D64D16 /* ContentView.swift */,
 				9F64CE1B29E2186E00D64D16 /* FolderTree */,
@@ -175,7 +175,7 @@
 			);
 			name = FileSharingKitDemoo;
 			packageProductDependencies = (
-				D079B74729E3EF78008C5F8B /* FileSharingKit */,
+				D03DB86029E740F4001D4AC9 /* FileSharingKit */,
 			);
 			productName = FileSharingKitDemoo;
 			productReference = 9F64CE0929E2172D00D64D16 /* FileSharingKitDemoo.app */;
@@ -477,7 +477,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D079B74729E3EF78008C5F8B /* FileSharingKit */ = {
+		D03DB86029E740F4001D4AC9 /* FileSharingKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FileSharingKit;
 		};
