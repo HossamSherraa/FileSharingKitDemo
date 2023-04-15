@@ -11,21 +11,7 @@
 		9F64CE0F29E2172D00D64D16 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE0E29E2172D00D64D16 /* ContentView.swift */; };
 		9F64CE1129E2172F00D64D16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F64CE1029E2172F00D64D16 /* Assets.xcassets */; };
 		9F64CE1529E2172F00D64D16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F64CE1429E2172F00D64D16 /* Preview Assets.xcassets */; };
-		9F64CE2C29E2186F00D64D16 /* FolderServerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE1C29E2186E00D64D16 /* FolderServerEvent.swift */; };
-		9F64CE2D29E2186F00D64D16 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE1D29E2186E00D64D16 /* Item.swift */; };
-		9F64CE2E29E2186F00D64D16 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE1E29E2186E00D64D16 /* Delegate.swift */; };
-		9F64CE2F29E2186F00D64D16 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE1F29E2186E00D64D16 /* Folder.swift */; };
-		9F64CE3029E2186F00D64D16 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2129E2186E00D64D16 /* ItemView.swift */; };
-		9F64CE3129E2186F00D64D16 /* FolderSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2229E2186E00D64D16 /* FolderSelection.swift */; };
-		9F64CE3229E2186F00D64D16 /* FolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2329E2186E00D64D16 /* FolderView.swift */; };
-		9F64CE3329E2186F00D64D16 /* LocalFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2529E2186E00D64D16 /* LocalFolderView.swift */; };
-		9F64CE3429E2186F00D64D16 /* SharedFolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2629E2186E00D64D16 /* SharedFolderView.swift */; };
-		9F64CE3529E2186F00D64D16 /* FolderViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2729E2186E00D64D16 /* FolderViewModelProtocol.swift */; };
-		9F64CE3629E2186F00D64D16 /* ThumpnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2829E2186E00D64D16 /* ThumpnailView.swift */; };
-		9F64CE3729E2186F00D64D16 /* ItemViewActionsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2A29E2186E00D64D16 /* ItemViewActionsMenu.swift */; };
-		9F64CE3829E2186F00D64D16 /* FolderViewActionsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F64CE2B29E2186E00D64D16 /* FolderViewActionsMenu.swift */; };
-		D035206E29E5D377004D0090 /* TrustedDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035206D29E5D377004D0090 /* TrustedDeviceCell.swift */; };
-		D035207029E5D52F004D0090 /* TrustedDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D035206F29E5D52F004D0090 /* TrustedDevices.swift */; };
+		9FD888E329EAE9D200B6680D /* DemoFolder in Frameworks */ = {isa = PBXBuildFile; productRef = 9FD888E229EAE9D200B6680D /* DemoFolder */; };
 		D03DB86129E740F4001D4AC9 /* FileSharingKit in Frameworks */ = {isa = PBXBuildFile; productRef = D03DB86029E740F4001D4AC9 /* FileSharingKit */; };
 /* End PBXBuildFile section */
 
@@ -36,21 +22,7 @@
 		9F64CE1029E2172F00D64D16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F64CE1229E2172F00D64D16 /* FileSharingKitDemoo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FileSharingKitDemoo.entitlements; sourceTree = "<group>"; };
 		9F64CE1429E2172F00D64D16 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9F64CE1C29E2186E00D64D16 /* FolderServerEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderServerEvent.swift; sourceTree = "<group>"; };
-		9F64CE1D29E2186E00D64D16 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		9F64CE1E29E2186E00D64D16 /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
-		9F64CE1F29E2186E00D64D16 /* Folder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
-		9F64CE2129E2186E00D64D16 /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
-		9F64CE2229E2186E00D64D16 /* FolderSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderSelection.swift; sourceTree = "<group>"; };
-		9F64CE2329E2186E00D64D16 /* FolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderView.swift; sourceTree = "<group>"; };
-		9F64CE2529E2186E00D64D16 /* LocalFolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalFolderView.swift; sourceTree = "<group>"; };
-		9F64CE2629E2186E00D64D16 /* SharedFolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedFolderView.swift; sourceTree = "<group>"; };
-		9F64CE2729E2186E00D64D16 /* FolderViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderViewModelProtocol.swift; sourceTree = "<group>"; };
-		9F64CE2829E2186E00D64D16 /* ThumpnailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumpnailView.swift; sourceTree = "<group>"; };
-		9F64CE2A29E2186E00D64D16 /* ItemViewActionsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewActionsMenu.swift; sourceTree = "<group>"; };
-		9F64CE2B29E2186E00D64D16 /* FolderViewActionsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FolderViewActionsMenu.swift; sourceTree = "<group>"; };
-		D035206D29E5D377004D0090 /* TrustedDeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustedDeviceCell.swift; sourceTree = "<group>"; };
-		D035206F29E5D52F004D0090 /* TrustedDevices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrustedDevices.swift; sourceTree = "<group>"; };
+		9FD888E129EAE98100B6680D /* DemoFolder */ = {isa = PBXFileReference; lastKnownFileType = text; path = DemoFolder; sourceTree = SOURCE_ROOT; };
 		D03DB85F29E740E6001D4AC9 /* FileSharingKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = FileSharingKit; path = ../../Final/FileSharingKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +32,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D03DB86129E740F4001D4AC9 /* FileSharingKit in Frameworks */,
+				9FD888E329EAE9D200B6680D /* DemoFolder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +62,7 @@
 				D03DB85F29E740E6001D4AC9 /* FileSharingKit */,
 				9F64CE0C29E2172D00D64D16 /* FileSharingKitDemooApp.swift */,
 				9F64CE0E29E2172D00D64D16 /* ContentView.swift */,
-				9F64CE1B29E2186E00D64D16 /* FolderTree */,
+				9FD888E129EAE98100B6680D /* DemoFolder */,
 				9F64CE1029E2172F00D64D16 /* Assets.xcassets */,
 				9F64CE1229E2172F00D64D16 /* FileSharingKitDemoo.entitlements */,
 				9F64CE1329E2172F00D64D16 /* Preview Content */,
@@ -103,52 +76,6 @@
 				9F64CE1429E2172F00D64D16 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		9F64CE1B29E2186E00D64D16 /* FolderTree */ = {
-			isa = PBXGroup;
-			children = (
-				9F64CE1C29E2186E00D64D16 /* FolderServerEvent.swift */,
-				9F64CE1D29E2186E00D64D16 /* Item.swift */,
-				9F64CE1E29E2186E00D64D16 /* Delegate.swift */,
-				9F64CE1F29E2186E00D64D16 /* Folder.swift */,
-				9F64CE2029E2186E00D64D16 /* FolderUI */,
-			);
-			path = FolderTree;
-			sourceTree = "<group>";
-		};
-		9F64CE2029E2186E00D64D16 /* FolderUI */ = {
-			isa = PBXGroup;
-			children = (
-				9F64CE2129E2186E00D64D16 /* ItemView.swift */,
-				9F64CE2229E2186E00D64D16 /* FolderSelection.swift */,
-				9F64CE2329E2186E00D64D16 /* FolderView.swift */,
-				9F64CE2429E2186E00D64D16 /* ActionsMenues */,
-				9F64CE2829E2186E00D64D16 /* ThumpnailView.swift */,
-				9F64CE2929E2186E00D64D16 /* MenuActions */,
-				D035206D29E5D377004D0090 /* TrustedDeviceCell.swift */,
-				D035206F29E5D52F004D0090 /* TrustedDevices.swift */,
-			);
-			path = FolderUI;
-			sourceTree = "<group>";
-		};
-		9F64CE2429E2186E00D64D16 /* ActionsMenues */ = {
-			isa = PBXGroup;
-			children = (
-				9F64CE2529E2186E00D64D16 /* LocalFolderView.swift */,
-				9F64CE2629E2186E00D64D16 /* SharedFolderView.swift */,
-				9F64CE2729E2186E00D64D16 /* FolderViewModelProtocol.swift */,
-			);
-			path = ActionsMenues;
-			sourceTree = "<group>";
-		};
-		9F64CE2929E2186E00D64D16 /* MenuActions */ = {
-			isa = PBXGroup;
-			children = (
-				9F64CE2A29E2186E00D64D16 /* ItemViewActionsMenu.swift */,
-				9F64CE2B29E2186E00D64D16 /* FolderViewActionsMenu.swift */,
-			);
-			path = MenuActions;
 			sourceTree = "<group>";
 		};
 		9F64CE3F29E21A0B00D64D16 /* Frameworks */ = {
@@ -176,6 +103,7 @@
 			name = FileSharingKitDemoo;
 			packageProductDependencies = (
 				D03DB86029E740F4001D4AC9 /* FileSharingKit */,
+				9FD888E229EAE9D200B6680D /* DemoFolder */,
 			);
 			productName = FileSharingKitDemoo;
 			productReference = 9F64CE0929E2172D00D64D16 /* FileSharingKitDemoo.app */;
@@ -233,23 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F64CE2D29E2186F00D64D16 /* Item.swift in Sources */,
-				9F64CE2E29E2186F00D64D16 /* Delegate.swift in Sources */,
-				9F64CE3529E2186F00D64D16 /* FolderViewModelProtocol.swift in Sources */,
-				9F64CE3129E2186F00D64D16 /* FolderSelection.swift in Sources */,
-				9F64CE2C29E2186F00D64D16 /* FolderServerEvent.swift in Sources */,
-				9F64CE3329E2186F00D64D16 /* LocalFolderView.swift in Sources */,
-				9F64CE3829E2186F00D64D16 /* FolderViewActionsMenu.swift in Sources */,
 				9F64CE0F29E2172D00D64D16 /* ContentView.swift in Sources */,
-				9F64CE3029E2186F00D64D16 /* ItemView.swift in Sources */,
-				9F64CE3629E2186F00D64D16 /* ThumpnailView.swift in Sources */,
-				9F64CE3429E2186F00D64D16 /* SharedFolderView.swift in Sources */,
 				9F64CE0D29E2172D00D64D16 /* FileSharingKitDemooApp.swift in Sources */,
-				9F64CE2F29E2186F00D64D16 /* Folder.swift in Sources */,
-				D035207029E5D52F004D0090 /* TrustedDevices.swift in Sources */,
-				D035206E29E5D377004D0090 /* TrustedDeviceCell.swift in Sources */,
-				9F64CE3729E2186F00D64D16 /* ItemViewActionsMenu.swift in Sources */,
-				9F64CE3229E2186F00D64D16 /* FolderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +390,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9FD888E229EAE9D200B6680D /* DemoFolder */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DemoFolder;
+		};
 		D03DB86029E740F4001D4AC9 /* FileSharingKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FileSharingKit;

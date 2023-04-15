@@ -8,7 +8,7 @@
 import Foundation
 import FileSharingKit
 
-struct Folder: Identifiable , Hashable , Sharable {
+public struct Folder: Identifiable , Hashable , Sharable {
     typealias Event = ServerFolderEvent<Folder>
     typealias Itemi = Item
     
@@ -72,9 +72,9 @@ struct Folder: Identifiable , Hashable , Sharable {
     }
     
     
-    static var fileToShare : Folder = try! Folder.init(at: URL.init(filePath: "/Users/macbookair/Downloads/Rt"))
+    static var fileToShare : Folder = try! Folder.init(at: URL.init(filePath: "/Users/hossam/Downloads/NewMusicCovers"))
     static var myLocalFolder : Folder {
-        try! Folder.init(at: .init(filePath: "/Users/macbookair/Downloads/MyFolder"))
+        try! Folder.init(at: .init(filePath: "/Users/hossam/Downloads/Okk"))
     }
     
     func rebuild() -> Folder {
