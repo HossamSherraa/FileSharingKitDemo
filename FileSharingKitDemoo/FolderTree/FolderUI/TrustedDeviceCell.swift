@@ -6,7 +6,27 @@
 //
 
 import SwiftUI
+import FileSharingKit
 
+class TrustedDeviceCellViewModel : ObservableObject {
+    let trustedDevice : TrustedDevices
+    
+    init(trustedDevice: TrustedDevices) {
+        self.trustedDevice = trustedDevice
+    }
+    
+    func onPress(){
+//        delegate.viewControllerToPresentPasscode()->VC
+//        VC.presentVieControoler(PassCode(completion : {
+//            1- dismiss
+//            2- delegate.presentSharedVC
+//
+//        }))
+//
+//        delegate.failToPresentedSharedDevice()
+    }
+    
+}
 struct TrustedDeviceCell: View {
     var body: some View {
         VStack(spacing:10){

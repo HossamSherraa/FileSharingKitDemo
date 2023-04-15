@@ -9,6 +9,10 @@ import SwiftUI
 import FileSharingKit
 @main
 struct FilesharingLocalServerApp: App , SharingFolderDelegate {
+    func failToJoinServer() {
+         
+    }
+    
     @State var isConnectPresented : Bool = false
     @State var isServerPresented : Bool = false
     
@@ -53,6 +57,10 @@ struct FilesharingLocalServerApp: App , SharingFolderDelegate {
     
     func dismissSharedFolderView() {
         server = nil
+    }
+    
+    func viewControllerForPresentingViewController() -> UIViewController {
+        UIApplication.shared.keyWindow!.rootViewController!
     }
     
     
