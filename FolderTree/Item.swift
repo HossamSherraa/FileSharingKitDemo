@@ -8,19 +8,19 @@
 import Foundation
 import UniformTypeIdentifiers
 import FileSharingKit
-struct Item: Identifiable  , Hashable , SharableItem{
+public struct Item: Identifiable  , Hashable , SharableItem{
      
     
-    let id : Int
+    public let id : Int
     let creationDate : Date
     let name : String
     let fileExtension : String
     let type : UTType?
   
-    let originalURL : URL
+    public let originalURL : URL
 
     
-    init(location : URL)throws{
+    public init(location : URL)throws{
         let filemanager : FileManager = .default
         let attributes = try filemanager.attributesOfItem(atPath:location.path)
         self.creationDate = attributes[.creationDate] as! Date

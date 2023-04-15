@@ -9,21 +9,21 @@ import Foundation
 import FileSharingKit
 
 public struct Folder: Identifiable , Hashable , Sharable {
-    typealias Event = ServerFolderEvent<Folder>
-    typealias Itemi = Item
+    public typealias Event = ServerFolderEvent<Folder>
+    public typealias Itemi = Item
     
-    var originalURL: URL {
+    public var originalURL: URL {
         originalLocation
     }
     
-    let id : Int
+    public let id : Int
     var creationDate : Date
     let name : String
     let originalLocation : URL
     var subFolders : [Folder] = []
     var contents : [Item] = []
     
-    init(at location : URL) throws {
+    public init(at location : URL) throws {
         let filemanager : FileManager = .default
         let attributes = try filemanager.attributesOfItem(atPath:location.path)
         self.creationDate = attributes[.creationDate] as! Date
@@ -72,12 +72,12 @@ public struct Folder: Identifiable , Hashable , Sharable {
     }
     
     
-    static var fileToShare : Folder = try! Folder.init(at: URL.init(filePath: "/Users/hossam/Downloads/NewMusicCovers"))
-    static var myLocalFolder : Folder {
+    public  static var fileToShare : Folder = try! Folder.init(at: URL.init(filePath: "/Users/hossam/Downloads/NewMusicCovers"))
+    public static var myLocalFolder : Folder {
         try! Folder.init(at: .init(filePath: "/Users/hossam/Downloads/Okk"))
     }
     
-    func rebuild() -> Folder {
+    public func rebuild() -> Folder {
         return try! .init(at: originalLocation)
     }
     

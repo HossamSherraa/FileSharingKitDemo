@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FileSharingKit
+ 
 @main
 struct FilesharingLocalServerApp: App {
     
@@ -22,7 +23,7 @@ struct FilesharingLocalServerApp: App {
 }
 
 
-
+ 
 struct MainSwiftUIView: View , SharingFolderDelegate{
     @State var isConnectPresented : Bool = false
     @State var isServerPresented : Bool = false
@@ -89,7 +90,7 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
 class MainViewController : UIViewController , ServerDelegate , SharingFolderDelegate {
     
     
- 
+    
     typealias Event = ServerFolderEvent<Folder>
     
     typealias F = Folder
@@ -113,9 +114,14 @@ class MainViewController : UIViewController , ServerDelegate , SharingFolderDele
         button.addTarget(self, action: #selector(onPressServer), for: .touchUpInside)
         return button
     }()
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .darkContent
+    }
+     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        overrideUserInterfaceStyle = .dark
         let stack = UIStackView(arrangedSubviews: [connectButton , serverButton])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
@@ -134,6 +140,7 @@ class MainViewController : UIViewController , ServerDelegate , SharingFolderDele
     @objc
     func onPressConnect(){
         let connectVC = sharing.recieveVM(folderType: Folder.self, delegate: self)
+        connectVC.overrideUserInterfaceStyle = .dark
         self.keepME = connectVC
         
          present(connectVC, animated: true)
@@ -142,6 +149,7 @@ class MainViewController : UIViewController , ServerDelegate , SharingFolderDele
     @objc
     func onPressServer(){
         let serverVC = sharing.shareVM(folder: Folder.fileToShare, delegate: self)
+        serverVC.overrideUserInterfaceStyle = .dark
         serverVC.modalPresentationStyle = .fullScreen
         present(serverVC, animated: true)
     }
@@ -155,7 +163,7 @@ class MainViewController : UIViewController , ServerDelegate , SharingFolderDele
     }
     
     func dismissSharedFolderView() {
-        self.dismiss(animated: true)
+//        self.dismiss(animated: true)
     }
     
     func failToJoinServer() {
@@ -164,6 +172,7 @@ class MainViewController : UIViewController , ServerDelegate , SharingFolderDele
     
   
     func presentSharedFolderView(server: FileSharingKit.ServerReciever<Folder>) {
+        dismiss(animated: true)
         let recievedFolderShareVC = UIHostingController(rootView: SharedFolderView(server: server))
         self.present(recievedFolderShareVC, animated: true)
     }

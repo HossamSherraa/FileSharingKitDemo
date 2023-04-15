@@ -7,7 +7,7 @@
 
 import FileSharingKit
 import Foundation
-enum ServerFolderEvent<F:Sharable> :  SharableFolderEvent{
+public enum ServerFolderEvent<F:Sharable> :  SharableFolderEvent{
     case deleteFolder(folder :F )
     case deleteItem(item : F.Itemi)
     case moveFolder(folder : F , toFolder : F)
@@ -15,7 +15,7 @@ enum ServerFolderEvent<F:Sharable> :  SharableFolderEvent{
     case rename(item : F.Itemi , name : String)
     
     
-    func handle()async throws{
+    public func handle()async throws{
         switch self {
         case .deleteFolder(let folder):
             try deleteFile(at: folder.originalURL)

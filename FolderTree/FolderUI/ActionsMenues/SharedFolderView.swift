@@ -66,16 +66,16 @@ class SharedFolderViewModel : FolderViewModelProtocol {
 
  
 
-struct SharedFolderView : View {
+public struct SharedFolderView : View {
     @StateObject var viewModel : SharedFolderViewModel
     @Environment(\.dismiss)
     var dismiss
     
-    init(server : ServerReciever<Folder>){
+   public init(server : ServerReciever<Folder>){
         _viewModel = .init(wrappedValue: .init(server: server))
     }
     
-    var body: some View {
+    public var body: some View {
         NavigationView {
             if let folder = viewModel.folder {
                 FolderView(itemMenu: ItemViewActionsMenu(viewModel: viewModel), folderMenu: FolderViewActionsMenu(viewModel: viewModel), folder: folder , viewModel: viewModel )

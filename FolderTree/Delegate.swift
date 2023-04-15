@@ -9,11 +9,11 @@ import Foundation
 import FileSharingKit
 import SwiftUI
  
-struct DefaultServerDelegate : ServerDelegate {
-   
+public struct DefaultServerDelegate : ServerDelegate {
+    public init(){}
     
-    typealias Event = ServerFolderEvent<Folder>
-    func handel(event: Event) async throws {
+    public typealias Event = ServerFolderEvent<Folder>
+    public func handel(event: Event) async throws {
         try await event.handle()
     }
 }

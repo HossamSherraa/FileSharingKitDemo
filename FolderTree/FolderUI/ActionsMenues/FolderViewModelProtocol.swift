@@ -7,7 +7,7 @@
 
 import SwiftUI
 import FileSharingKit
-protocol FolderViewModelProtocol : ObservableObject {
+public protocol FolderViewModelProtocol : ObservableObject {
     var folder : Folder? {get set}
     func send(serverEvent : ServerFolderEvent<Folder>)async
     func download(item : Item , downloadLocation : URL , progress : @Sendable (Double)->Void )async throws->URL
