@@ -16,7 +16,7 @@ struct FilesharingLocalServerApp: App {
     var body: some Scene {
         WindowGroup {
             
-           AnyUIViewController(vc: MainViewController())
+          MainSwiftUIView()
         }
     }
     
@@ -34,7 +34,7 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
     var body: some View {
      
             NavigationView {
-                List{
+                VStack{
                     Button("Connect") {
                         isConnectPresented.toggle()
                     }
@@ -42,6 +42,8 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
                     Button("Server") {
                         isServerPresented.toggle()
                     }
+                    
+                    TrustedDevices(delegate: self)
                 }
             }
             .fullScreenCover(isPresented: $isServerPresented, content: {
@@ -50,7 +52,7 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
             })
             .fullScreenCover(isPresented: $isConnectPresented, content: {
                 sharing.recieve(folderType: Folder.self ,delegate: self)
-                    .sheet(item: $server) { server in
+                    .fullScreenCover(item: $server) { server in
                         SharedFolderView(server: server)
                     }
             })
@@ -59,20 +61,26 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
             })
            
             .preferredColorScheme(.dark)
+            .fullScreenCover(item: $server) { server in
+                SharedFolderView(server: server)
+            }
             
                
 
         
     }
     func presentSharedFolderView(server: FileSharingKit.ServerReciever<Folder>) {
+        DispatchQueue.main.async {
+            UIApplication.shared.keyWindow!.rootViewController!.dismiss(animated: true)
         self.server = server
+        }
     }
     
     func dismissSharedFolderView() {
         server = nil
     }
     func failToJoinServer() {
-         
+         print("FAIL TO JOIN")
     }
     
     func viewControllerForPresentingViewController() -> UIViewController {
@@ -134,6 +142,8 @@ class MainViewController : UIViewController , ServerDelegate , SharingFolderDele
         
         ])
         
+        
+        
     }
     
     var keepME : UIViewController?
@@ -163,7 +173,7 @@ class MainViewController : UIViewController , ServerDelegate , SharingFolderDele
     }
     
     func dismissSharedFolderView() {
-//        self.dismiss(animated: true)
+         self.dismiss(animated: true)
     }
     
     func failToJoinServer() {

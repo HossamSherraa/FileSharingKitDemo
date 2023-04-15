@@ -10,12 +10,14 @@ import FileSharingKit
 class TrustedDevicesViewModel<Delegate: SharingFolderDelegate>: ObservableObject {
     internal init(delegate: Delegate) {
         self.delegate = delegate
+        
     }
     
     let delegate: Delegate
     
     @Published var trustedDevices : [TrustedDevice] = []
     func fetchTrustedDevices(){
+        
         Task{
             let devices =  try await TrustedDevice.trustedDevices()
             await MainActor.run(body: {
@@ -36,6 +38,7 @@ struct TrustedDevices<Delegate : SharingFolderDelegate>: View {
                      
             }
         }
+        .onAppear(perform: viewModel.fetchTrustedDevices)
     }
 }
 
