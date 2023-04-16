@@ -52,9 +52,7 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
             })
             .fullScreenCover(isPresented: $isConnectPresented, content: {
                 sharing.recieve(folderType: Folder.self ,delegate: self)
-                    .fullScreenCover(item: $server) { server in
-                        SharedFolderView(server: server)
-                    }
+                   
             })
             .onAppear(perform: {
                 try? FileManager.default.createDirectory(at: .documentsDirectory.appending(path: "/Main"), withIntermediateDirectories: true)
@@ -83,7 +81,7 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
          print("FAIL TO JOIN")
     }
     
-    func viewControllerForPresentingViewController() -> UIViewController {
+    func viewControllerForPresentingPasscode() -> UIViewController {
         UIApplication.shared.keyWindow!.rootViewController!
     }
 }
@@ -168,7 +166,7 @@ class MainViewController : UIViewController , ServerDelegate , SharingFolderDele
     
     //MARK: Connect to Server Delegate
     
-    func viewControllerForPresentingViewController() -> UIViewController {
+    func viewControllerForPresentingPasscode() -> UIViewController {
         self
     }
     
