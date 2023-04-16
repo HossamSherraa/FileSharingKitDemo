@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  FileSharingKitDemoo
+
+  Created by Hossam on 16/04/2023.
+  
+*/
+
+"Connect with QR" = "الاتصال بواسطة رمز الاستجابة السريعة";
+"Connect" = "الاتصال";
+"Connected Devices" = "الأجهزة المتصلة";
+"Finding Devices" = "البحث عن الأجهزة";
+"QR Code" = "رمز الاستجابة السريعة";
+"Pairing" = "الإقران";
+"Close" = "إغلاق";
+"Wrong Passcode" = "رمز المرور خاطئ";
+"Open Folder" = "فتح المجلد";
+"Stop Sharing" = "إيقاف المشاركة";
+"Disconnect" = "قطع الاتصال";
+"Server" = "مشاركة";
+"Start Sharing" = "بدأ المشاركة" ;
+"File Sharing" = "مشاركة الملفات";

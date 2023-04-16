@@ -52,6 +52,8 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
             })
             .fullScreenCover(isPresented: $isConnectPresented, content: {
                 sharing.recieve(folderType: Folder.self ,delegate: self)
+                    .environment(\.layoutDirection, .rightToLeft)
+                    .environment(\.locale, .init(identifier: "ar"))
                    
             })
             .onAppear(perform: {
@@ -62,6 +64,7 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
             .fullScreenCover(item: $server) { server in
                 SharedFolderView(server: server)
             }
+            
             
                
 

@@ -52,9 +52,7 @@ struct TrustedDeviceCell<Delegate : SharingFolderDelegate>: View {
             Text(viewModel.name)
                     
                      
-                Circle()
-                    .frame(width: 10, height: 10)
-                    .foregroundColor(.green)
+               
             
             if viewModel.isLoading {
                 ProgressView()
