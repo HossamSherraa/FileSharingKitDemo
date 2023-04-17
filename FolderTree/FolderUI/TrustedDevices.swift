@@ -19,7 +19,7 @@ class TrustedDevicesViewModel<Delegate: SharingFolderDelegate>: ObservableObject
     func fetchTrustedDevices(){
         
         Task{
-            let devices =  try await TrustedDevice.trustedDevices()
+            let devices =  try await TrustedDevice.clientTrustedDevices()
             await MainActor.run(body: {
                 self.trustedDevices = devices
             })

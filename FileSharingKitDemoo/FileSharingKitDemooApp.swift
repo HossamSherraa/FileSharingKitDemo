@@ -48,7 +48,8 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
             }
             .fullScreenCover(isPresented: $isServerPresented, content: {
                 sharing.share(folder: Folder.fileToShare , delegate: DefaultServerDelegate())
-                
+                    .environment(\.layoutDirection, .rightToLeft)
+                    .environment(\.locale, .init(identifier: "ar"))
             })
             .fullScreenCover(isPresented: $isConnectPresented, content: {
                 sharing.recieve(folderType: Folder.self ,delegate: self)
@@ -63,6 +64,15 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
             .preferredColorScheme(.dark)
             .fullScreenCover(item: $server) { server in
                 SharedFolderView(server: server)
+                    .task {
+                        try? await server.startListenToStatus {
+                            
+                        } onDisconnect: {
+                            self.server = nil
+                        }
+
+                    }
+                     
             }
             
             
