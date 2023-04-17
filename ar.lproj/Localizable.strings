@@ -20,3 +20,5 @@
 "Server" = "مشاركة";
 "Start Sharing" = "بدأ المشاركة" ;
 "File Sharing" = "مشاركة الملفات";
+"Trusted Devices" = "الأجهزة الموثوقة" ;
+"Untrust" = "الغاء الثقة" ;
