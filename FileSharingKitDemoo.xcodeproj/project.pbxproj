@@ -27,6 +27,7 @@
 		9F64CE1129E2172F00D64D16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F64CE1029E2172F00D64D16 /* Assets.xcassets */; };
 		9F64CE1529E2172F00D64D16 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F64CE1429E2172F00D64D16 /* Preview Assets.xcassets */; };
 		9F7A106029EC8F1600A40EAE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F7A106229EC8F1600A40EAE /* Localizable.strings */; };
+		9FA0E32329F7240200F80969 /* QRCodeGenerator in Frameworks */ = {isa = PBXBuildFile; productRef = 9FA0E32229F7240200F80969 /* QRCodeGenerator */; };
 		9FD888E729EAEB2D00B6680D /* FileSharingKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9FD888E629EAEB2D00B6680D /* FileSharingKit */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA0E32329F7240200F80969 /* QRCodeGenerator in Frameworks */,
 				9FD888E729EAEB2D00B6680D /* FileSharingKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +182,7 @@
 			name = FileSharingKitDemoo;
 			packageProductDependencies = (
 				9FD888E629EAEB2D00B6680D /* FileSharingKit */,
+				9FA0E32229F7240200F80969 /* QRCodeGenerator */,
 			);
 			productName = FileSharingKitDemoo;
 			productReference = 9F64CE0929E2172D00D64D16 /* FileSharingKitDemoo.app */;
@@ -211,6 +214,7 @@
 			);
 			mainGroup = 9F64CE0029E2172D00D64D16;
 			packageReferences = (
+				9FA0E32129F7240200F80969 /* XCRemoteSwiftPackageReference "swift-qrcode-generator" */,
 			);
 			productRefGroup = 9F64CE0A29E2172D00D64D16 /* Products */;
 			projectDirPath = "";
@@ -400,6 +404,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FileSharingKitDemoo/Info.plist;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Scanning QR";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -443,6 +448,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FileSharingKitDemoo/Info.plist;
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Scanning QR";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -494,7 +500,23 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		9FA0E32129F7240200F80969 /* XCRemoteSwiftPackageReference "swift-qrcode-generator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fwcd/swift-qrcode-generator";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		9FA0E32229F7240200F80969 /* QRCodeGenerator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FA0E32129F7240200F80969 /* XCRemoteSwiftPackageReference "swift-qrcode-generator" */;
+			productName = QRCodeGenerator;
+		};
 		9FD888E629EAEB2D00B6680D /* FileSharingKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FileSharingKit;

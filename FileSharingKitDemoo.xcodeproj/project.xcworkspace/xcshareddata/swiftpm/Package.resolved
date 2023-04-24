@@ -17,6 +17,24 @@
         "revision" : "d158b7a4319564ed5edb410b9e3326798d77061b",
         "version" : "1.0.0"
       }
+    },
+    {
+      "identity" : "mobilliumqrcodereader",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mobillium/MobilliumQRCodeReader",
+      "state" : {
+        "revision" : "7fd7e642e2823b7fc660a4fc26b62dd621570610",
+        "version" : "1.1.1"
+      }
+    },
+    {
+      "identity" : "swift-qrcode-generator",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fwcd/swift-qrcode-generator",
+      "state" : {
+        "branch" : "main",
+        "revision" : "5891c4f87abb86fc71e394672119a897068662c0"
+      }
     }
   ],
   "version" : 2
