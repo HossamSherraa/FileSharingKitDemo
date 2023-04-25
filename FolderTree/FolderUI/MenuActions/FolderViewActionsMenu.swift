@@ -23,6 +23,7 @@ struct FolderViewActionsMenu: ActionMenuView {
         @State var progress : Double?
         
         @State var isChossingFolderForUpload : Bool = false
+        @State var isChossingFolderForDownload : Bool = false
         
         
     var body: some View {
@@ -35,6 +36,12 @@ struct FolderViewActionsMenu: ActionMenuView {
                         isChossingFolderForUpload.toggle()
                     } label: {
                         Label("Put File", systemImage: "paperplane.fill" )
+                    }
+                    
+                    Button {
+                        isChossingFolderForDownload.toggle()
+                    } label: {
+                        Label("Download Folder", systemImage: "paperplane.fill" )
                     }
                 } label: {
                     Image(systemName: "ellipsis.circle.fill")
@@ -69,6 +76,15 @@ struct FolderViewActionsMenu: ActionMenuView {
                     
                 }
             }
+        }
+        
+        
+        .sheet(isPresented: $isChossingFolderForDownload) {
+            MyFilesFolderSelection(folderSelection: { selection in
+                Task{
+                    try await viewModel.download(folder: self.folder, downloadLocation: selection.originalLocation)
+                }
+            }, itemSelection: {_ in })
         }
         
        

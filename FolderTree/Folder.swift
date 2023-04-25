@@ -20,8 +20,8 @@ public struct Folder: Identifiable , Hashable , Sharable {
     var creationDate : Date
     let name : String
     let originalLocation : URL
-    var subFolders : [Folder] = []
-    var contents : [Item] = []
+    public var subFolders : [Folder] = []
+    public var contents : [Item] = []
     
     public init(at location : URL) throws {
         let filemanager : FileManager = .default
@@ -72,7 +72,7 @@ public struct Folder: Identifiable , Hashable , Sharable {
     }
     
     
-    public  static var fileToShare : Folder = try! Folder.init(at: URL.init(filePath: "/Users/macbookair/Downloads/MyFolder"))
+    public  static var fileToShare : Folder = try! Folder.init(at: URL.init(filePath: "/Users/macbookair/Downloads/Rt"))
     public static var myLocalFolder : Folder {
         try! Folder.init(at: .documentsDirectory)
     }
@@ -80,6 +80,8 @@ public struct Folder: Identifiable , Hashable , Sharable {
     public func rebuild() -> Folder {
         return try! .init(at: originalLocation)
     }
+    
+   
     
 }
 
