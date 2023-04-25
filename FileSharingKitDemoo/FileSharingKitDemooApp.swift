@@ -82,7 +82,7 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
     }
     func presentSharedFolderView(server: FileSharingKit.ServerReciever<Folder>) {
         DispatchQueue.main.async {
-            UIApplication.shared.keyWindow!.rootViewController!.dismiss(animated: true)
+            UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true)
         self.server = server
         }
     }
