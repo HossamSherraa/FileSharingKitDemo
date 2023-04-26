@@ -82,7 +82,14 @@ struct FolderViewActionsMenu: ActionMenuView {
         .sheet(isPresented: $isChossingFolderForDownload) {
             MyFilesFolderSelection(folderSelection: { selection in
                 Task{
-                    try await viewModel.download(folder: self.folder, downloadLocation: selection.originalLocation)
+                    try await viewModel.download(folder: self.folder, downloadLocation: selection.originalLocation, progress: { progress in
+                        self.progress = progress
+                        print(self.progress , "PROGGGGKKKFFI3232")
+                        
+                        
+                    })
+                    
+                    progress = nil
                 }
             }, itemSelection: {_ in })
         }

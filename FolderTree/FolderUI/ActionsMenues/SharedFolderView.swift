@@ -10,8 +10,10 @@ import FileSharingKit
 import SwiftUI
 
 class SharedFolderViewModel : FolderViewModelProtocol {
-    func download(folder: Folder, downloadLocation: URL) async throws{
-        try await server.download(folder: folder, to: downloadLocation)
+    
+    
+    func download(folder: Folder, downloadLocation: URL ,progress : @Sendable @escaping (Double)->Void ) async throws{
+        try await server.download(folder: folder, to: downloadLocation, progress: progress )
     }
     
     func upload(item: Item, saveLocation: URL , progress : @Sendable (Double)->Void) async throws {
@@ -43,7 +45,7 @@ class SharedFolderViewModel : FolderViewModelProtocol {
         }
     }
     
-    func download(item : Item , downloadLocation : URL , progress :  @Sendable (Double)->Void)async throws->URL {
+    func download(item: Item, downloadLocation: URL, progress: @escaping @Sendable (Double) -> Void) async throws -> URL {
         
         try await server.download(item: item , downloadLocation: downloadLocation , progress : progress)
         

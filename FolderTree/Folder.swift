@@ -72,9 +72,9 @@ public struct Folder: Identifiable , Hashable , Sharable {
     }
     
     
-    public  static var fileToShare : Folder = try! Folder.init(at: URL.init(filePath: "/Users/macbookair/Downloads/Rt"))
+    public  static var fileToShare : Folder = try! Folder.init(at: URL.init(filePath: "/Users/hossam/Downloads/NewMusicCovers"))
     public static var myLocalFolder : Folder {
-        try! Folder.init(at: .documentsDirectory)
+        try! Folder.init(at: URL.init(filePath: "/Users/hossam/Downloads/Okk"))
     }
     
     public func rebuild() -> Folder {
