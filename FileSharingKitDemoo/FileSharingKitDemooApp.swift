@@ -48,13 +48,13 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
             }
             .fullScreenCover(isPresented: $isServerPresented, content: {
                 sharing.share(folder: Folder.fileToShare , delegate: DefaultServerDelegate())
-                    .environment(\.layoutDirection, .rightToLeft)
-                    .environment(\.locale, .init(identifier: "ar"))
+//                    .environment(\.layoutDirection, .rightToLeft)
+//                    .environment(\.locale, .init(identifier: "ar"))
             })
             .fullScreenCover(isPresented: $isConnectPresented, content: {
                 sharing.recieve(folderType: Folder.self ,delegate: self)
-                    .environment(\.layoutDirection, .rightToLeft)
-                    .environment(\.locale, .init(identifier: "ar"))
+                   // .environment(\.layoutDirection, .rightToLeft)
+                   // .environment(\.locale, .init(identifier: "ar"))
                    
             })
             .onAppear(perform: {
