@@ -46,6 +46,7 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
                     TrustedDevices(delegate: self)
                 }
             }
+            .navigationViewStyle(.stack)
             .fullScreenCover(isPresented: $isServerPresented, content: {
                 sharing.share(folder: Folder.fileToShare , delegate: DefaultServerDelegate())
 //                    .environment(\.layoutDirection, .rightToLeft)
