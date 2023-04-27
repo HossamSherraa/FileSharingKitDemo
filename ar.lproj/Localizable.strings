@@ -22,3 +22,32 @@
 "File Sharing" = "مشاركة الملفات";
 "Trusted Devices" = "الأجهزة الموثوقة" ;
 "Untrust" = "الغاء الثقة" ;
+"Common Questions" = "الأسئلة الشائعة" ;
+
+
+"Why can't I see any devices when I search for them on the app?" = "لماذا لا يمكنني رؤية أي أجهزة عندما أبحث عنها في التطبيق؟" ;
+
+
+
+"There could be a few reasons for this. First, make sure that all devices are connected to the same Wi-Fi network. If they are, try restarting the app and/or the Wi-Fi on all devices. Additionally, some routers have settings that can restrict local network communication, so you may need to check your router's settings or consult with your network administrator." = "قد تكون هناك عدة أسباب لذلك. أولاً ، تأكد من أن جميع الأجهزة متصلة بشبكة Wi-Fi نفسها. وإذا كانت كذلك ، فحاول إعادة تشغيل التطبيق و / أو شبكة Wi-Fi على جميع الأجهزة. بالإضافة إلى ذلك ، فإن بعض أجهزة التوجيه لديك إعدادات يمكنها تقييد اتصال الشبكة المحلية ، لذلك قد تحتاج إلى التحقق من إعدادات جهاز التوجيه أو استشارة مسؤول الشبكة. " ;
+
+
+
+"Why is the transfer of data taking so long?"  =  "لماذا يستغرق نقل البيانات كل هذا الوقت الطويل؟" ;
+
+
+
+"Slow transfer speeds can be caused by a variety of factors, including poor Wi-Fi signal strength, interference from other devices, or large file sizes. Try moving the devices closer together, closing any other apps that may be using Wi-Fi." = "يمكن أن تحدث سرعات النقل البطيئة بسبب مجموعة متنوعة من العوامل ، بما في ذلك ضعف قوة إشارة Wi-Fi ، أو التداخل من الأجهزة الأخرى ، أو أحجام الملفات الكبيرة. حاول تقريب الأجهزة من بعضها البعض ، وإغلاق أي تطبيقات أخرى ربما تستخدم Wi-Fi. " ;
+
+
+"I'm getting an error message saying the QR code failed. What should I do?" = "أتلقى رسالة خطأ تفيد بفشل رمز الاستجابة السريعة. ماذا أفعل؟" ;
+
+
+"If the QR code failed, double-check that both devices are connected to the same Wi-Fi network and that the other device is online. If everything seems to be in order, try restarting the app on both devices and scanning the QR code again." = "إذا فشل رمز الاستجابة السريعة ، فتحقق جيدًا من أن كلا الجهازين متصلان بشبكة Wi-Fi نفسها وأن الجهاز الآخر متصل بالإنترنت. إذا بدا أن كل شيء على ما يرام ، فحاول إعادة تشغيل التطبيق على كلا الجهازين ومسح رمز الاستجابة السريعة ضوئيًا مرة أخرى." ;
+
+
+
+"I'm having trouble entering the passcode for the other device. What's wrong?" = "أواجه مشكلة في إدخال رمز المرور للجهاز الآخر. ما هو الخطأ؟" ;
+
+
+"Double-check that you are entering the passcode correctly and that the other device is online and connected to the same Wi-Fi network. If you are still having trouble, try restarting the app on both devices and entering the passcode again." = "تحقق جيدًا من إدخال رمز المرور بشكل صحيح وأن الجهاز الآخر متصل بالإنترنت ومتصل بشبكة Wi-Fi نفسها. إذا كنت لا تزال تواجه مشكلة ، فحاول إعادة تشغيل التطبيق على كلا الجهازين وإدخال رمز المرور مرة أخرى." ; 
