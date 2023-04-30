@@ -18,12 +18,16 @@ class TrustedDevicesViewModel<Delegate: SharingFolderDelegate>: ObservableObject
     @Published var trustedDevices : [TrustedDevice] = []
     func fetchTrustedDevices(){
         
-        Task{
-            let devices =  try await TrustedDevice.clientTrustedDevices()
-            await MainActor.run(body: {
-                self.trustedDevices = devices
-            })
-        }
+        
+         TrustedDevice.serverTrustedDevices(completion: { trustedDevices in
+            DispatchQueue.main.async {
+                self.trustedDevices = trustedDevices
+            }
+        }, fail: { error in
+            fatalError()
+        })
+            
+        
     }
 }
 struct TrustedDevices<Delegate : SharingFolderDelegate>: View {
