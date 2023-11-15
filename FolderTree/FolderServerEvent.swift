@@ -9,10 +9,10 @@ import FileSharingKit
 import Foundation
 public enum ServerFolderEvent<F:Sharable> :  SharableFolderEvent{
     case deleteFolder(folder :F )
-    case deleteItem(item : F.Itemi)
+    case deleteItem(item : F)
     case moveFolder(folder : F , toFolder : F)
-    case moveItem(item : F.Itemi , toFolder : F)
-    case rename(item : F.Itemi , name : String)
+    case moveItem(item : F , toFolder : F)
+    case rename(item : F , name : String)
     
     
     public func handle()async throws{
@@ -40,7 +40,7 @@ public enum ServerFolderEvent<F:Sharable> :  SharableFolderEvent{
     }
     
     
-    private func rename(item : some SharableItem , name : String)throws{
+    private func rename(item : F , name : String)throws{
         let type = item.originalURL.pathExtension
         var newLocation = item.originalURL.deletingLastPathComponent()
  

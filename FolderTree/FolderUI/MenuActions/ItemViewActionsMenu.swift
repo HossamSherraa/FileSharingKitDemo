@@ -11,7 +11,7 @@ struct ItemViewActionsMenu:ActionMenuView {
 
     let viewModel : SharedFolderViewModel
     
-    func menu(for item : Item)-> some View {
+    func menu(for item : Folder)-> some View {
         InternalMenu(item: item, viewModel: viewModel)
     }
     
@@ -22,7 +22,7 @@ struct ItemViewActionsMenu:ActionMenuView {
         @State var isChossingFolderForUpload: Bool = false
         @State var isChossingFolderPresnetedForCopy: Bool = false
         @State var isChangeNamePresented: Bool = false
-        let item : Item
+        let item : Folder
         @State var newName : String = ""
         let viewModel : SharedFolderViewModel
         
@@ -134,7 +134,7 @@ struct ItemViewActionsMenu:ActionMenuView {
 
 struct EmptyItemViewActionsMenu:ActionMenuView {
     
-    func menu(for item : Item)-> some View{
+    func menu(for item : Folder)-> some View{
         EmptyView()
     }
 }
@@ -148,14 +148,14 @@ struct EmptyFolderViewActionsMenu:ActionMenuView {
 
 
 struct ItemViewSelectionMenu : ActionMenuView{
-    let selection : (_ item : Item)-> Void
-    func menu(for item: Item) -> some View {
+    let selection : (_ item : Folder)-> Void
+    func menu(for item: Folder) -> some View {
         InternalMenu(item: item, selection: selection)
     }
     
     struct InternalMenu : View {
-        let item : Item
-        let selection : (_ item : Item)-> Void
+        let item : Folder
+        let selection : (_ item : Folder)-> Void
         
         var body: some View {
             Button("Select") {

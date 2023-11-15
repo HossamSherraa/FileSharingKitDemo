@@ -15,11 +15,11 @@ class LocalFolderViewModel : FolderViewModelProtocol {
     }
     
     
-    func download(item: Item, downloadLocation: URL, progress: @Sendable (Double) -> Void) async throws -> URL {
+    func download(item: Folder, downloadLocation: URL, progress: @Sendable (Double) -> Void) async throws -> URL {
         item.originalURL
     }
     
-    func upload(item: Item, saveLocation: URL, progress: @Sendable (Double) -> Void) async throws {
+    func upload(item: Folder, saveLocation: URL, progress: @Sendable (Double) -> Void) async throws {
          
     }
     
@@ -28,7 +28,7 @@ class LocalFolderViewModel : FolderViewModelProtocol {
     @Published var folder  : Folder? = .myLocalFolder
     
      
-    func getPreviewImageFor(item : Item) async -> UIImage?{
+    func getPreviewImageFor(item : Folder) async -> UIImage?{
         try? await ThumpnailProvider().getThumpnail(url: item.originalURL, size: .init(width: 90, height: 120))
     }
     func send(serverEvent : ServerFolderEvent<Folder>)async {

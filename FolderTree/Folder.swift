@@ -10,7 +10,7 @@ import FileSharingKit
 
 public struct Folder: Identifiable , Hashable , Sharable {
     public typealias Event = ServerFolderEvent<Folder>
-    public typealias Itemi = Item
+    
     
     public var originalURL: URL {
         originalLocation
@@ -19,9 +19,10 @@ public struct Folder: Identifiable , Hashable , Sharable {
     public let id : Int
     var creationDate : Date
     let name : String
+    let fileExtension : String
     let originalLocation : URL
     public var subFolders : [Folder] = []
-    public var contents : [Item] = []
+    public var contents : [Folder] = []
     
     public init(at location : URL) throws {
         let filemanager : FileManager = .default
@@ -29,6 +30,7 @@ public struct Folder: Identifiable , Hashable , Sharable {
         self.creationDate = attributes[.creationDate] as! Date
         self.name = location.lastPathComponent
         self.id = (attributes[.systemFileNumber] as! NSNumber).intValue
+        self.fileExtension = ""
         self.originalLocation = location
         try configFileContent(at: location)
     }
@@ -47,17 +49,18 @@ public struct Folder: Identifiable , Hashable , Sharable {
                 self.subFolders.append(folder)
             }else {
                 
-                let item = try Item(location: url)
+                let item = try Folder(at: url)
                 self.contents.append(item)
             }
+            
             
         }
     }
     
     
-    var items : [Item]{
-        let contentEndpoints : [Item] = self.contents
-        let subfoldersEndpoints : [Item] = self.subFolders.flatMap(\.items)
+    var items : [Folder]{
+        let contentEndpoints : [Folder] = self.contents
+        let subfoldersEndpoints : [Folder] = self.subFolders
         return contentEndpoints + subfoldersEndpoints
     }
     

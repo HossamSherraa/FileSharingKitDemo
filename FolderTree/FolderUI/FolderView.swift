@@ -12,7 +12,7 @@ protocol ActionMenuView {
     func menu(for item : Element)-> Content
 }
 
-struct FolderView<ItemMenu : ActionMenuView , FolderMenu : ActionMenuView , VM : FolderViewModelProtocol> : View where ItemMenu.Element == Item , FolderMenu.Element  == Folder {
+struct FolderView<ItemMenu : ActionMenuView , FolderMenu : ActionMenuView , VM : FolderViewModelProtocol> : View where ItemMenu.Element == Folder , FolderMenu.Element  == Folder {
     let itemMenu : ItemMenu
     let folderMenu :  FolderMenu
     let folder : Folder

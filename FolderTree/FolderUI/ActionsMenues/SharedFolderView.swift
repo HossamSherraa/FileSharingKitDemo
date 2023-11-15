@@ -16,7 +16,7 @@ class SharedFolderViewModel : FolderViewModelProtocol {
         try await server.download(folder: folder, to: downloadLocation, progress: progress )
     }
     
-    func upload(item: Item, saveLocation: URL , progress : @Sendable (Double)->Void) async throws {
+    func upload(item: Folder, saveLocation: URL , progress : @Sendable (Double)->Void) async throws {
         let newFolder = try await server.upload(item: item, saveLocation: saveLocation , progress: progress)
           await MainActor.run {
             self.folder = newFolder
@@ -45,13 +45,13 @@ class SharedFolderViewModel : FolderViewModelProtocol {
         }
     }
     
-    func download(item: Item, downloadLocation: URL, progress: @escaping @Sendable (Double) -> Void) async throws -> URL {
+    func download(item: Folder, downloadLocation: URL, progress: @escaping @Sendable (Double) -> Void) async throws -> URL {
         
         try await server.download(item: item , downloadLocation: downloadLocation , progress : progress)
         
     }
     
-    func getPreviewImageFor(item : Item) async -> UIImage?{
+    func getPreviewImageFor(item : Folder) async -> UIImage?{
         try? await  server.previewFor(item: item)
     }
     func send(serverEvent : ServerFolderEvent<Folder>)async {

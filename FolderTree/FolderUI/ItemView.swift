@@ -8,8 +8,8 @@
 import SwiftUI
 import QuickLook
 
-struct ItemView<ItemMenu : ActionMenuView , VM : FolderViewModelProtocol>: View  where ItemMenu.Element == Item{
-    let item : Item
+struct ItemView<ItemMenu : ActionMenuView , VM : FolderViewModelProtocol>: View  where ItemMenu.Element == Folder{
+    let item : Folder
     let itemMenu : ItemMenu
     
     @State var previewImage : UIImage?
@@ -59,8 +59,8 @@ struct ItemView<ItemMenu : ActionMenuView , VM : FolderViewModelProtocol>: View 
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
             Group{
-                Text(item.creationDate , style: .date)
-                Text(item.fileExtension)
+//                Text(item.creationDate , style: .date)
+//                Text(item.fileExtension)
                 
             }
                 .font(.caption)
