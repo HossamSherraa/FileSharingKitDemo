@@ -22,11 +22,25 @@ struct FilesharingLocalServerApp: App {
     
 }
 
-
+struct PresentBox : View , Identifiable {
+    let id = UUID().uuidString
+    var wrapper :  ()-> any View
+    var body: some View {
+       AnyView( wrapper())
+    }
+}
  
 struct MainSwiftUIView: View , SharingFolderDelegate{
+    func presentPassCodeView(server: any View) {
+        self.presentView = .init(wrapper: {server})
+    }
+    
+     
+    
     @State var isConnectPresented : Bool = false
     @State var isServerPresented : Bool = false
+    @State var presentView : PresentBox?
+   
     
     @State var server : ServerReciever<Folder>? = nil
     let sharing = FileSharing()
@@ -75,6 +89,9 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
                     }
                      
             }
+            .fullScreenCover(item: $presentView) { view in
+                view
+            }
             
             
                
@@ -83,7 +100,9 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
     }
     func presentSharedFolderView(server: FileSharingKit.ServerReciever<Folder>) {
         DispatchQueue.main.async {
-            UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true)
+           presentView = nil
+            isConnectPresented = false
+            self.isServerPresented = false
         self.server = server
         }
     }
@@ -95,9 +114,7 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
          print("FAIL TO JOIN")
     }
     
-    func viewControllerForPresentingPasscode() -> UIViewController {
-        UIApplication.shared.keyWindow!.rootViewController!
-    }
+    
 }
 
 
@@ -108,6 +125,10 @@ struct MainSwiftUIView: View , SharingFolderDelegate{
 
 
 class MainViewController : UIViewController , ServerDelegate , SharingFolderDelegate {
+    func presentPassCodeView(server: any View) {
+         
+    }
+    
     
     
     

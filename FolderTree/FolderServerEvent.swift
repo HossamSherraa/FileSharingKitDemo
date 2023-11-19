@@ -51,5 +51,3 @@ public enum ServerFolderEvent<F:Sharable> :  SharableFolderEvent{
     }
     
 }
-
-
